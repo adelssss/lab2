@@ -29,7 +29,7 @@ const fetchTodos = () => {
                     checkboxDiv.onclick = () => handleEdit(todo._id);
 
                     const checkboxIcon = todo.done ? '✓' : '○';
-                    checkboxDiv.innerHTML = <span>${checkboxIcon}</span><p class="${todo.done ? 'line_through' : ''}">${todo.task}</p>;
+                    checkboxDiv.innerHTML = `<span>${checkboxIcon}</span><p class="${todo.done ? 'line_through' : ''}">${todo.task}</p>`;
                     
                     const deleteSpan = document.createElement('span');
                     deleteSpan.innerHTML = '🗑️';
@@ -71,13 +71,13 @@ const handleAdd = () => {
 };
 
 const handleEdit = (id) => {
-    fetch(http://localhost:3000/update/${id}, { method: 'PUT' })
+    fetch(`http://localhost:3000/update/${id}`, { method: 'PUT' })  
         .then(() => fetchTodos())
         .catch(err => console.error('Error updating task:', err));
 };
 
 const handleDelete = (id) => {
-    fetch(http://localhost:3000/delete/${id}, { method: 'DELETE' })
+    fetch(`http://localhost:3000/delete/${id}`, { method: 'DELETE' })  
         .then(() => fetchTodos())
         .catch(err => console.error('Error deleting task:', err));
 };
