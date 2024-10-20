@@ -97,4 +97,4 @@ Success (200): Returns a JSON object with a message indicating "Task deleted suc
 Error (404): Returns an error message indicating "Task not found" if the task ID does not match any existing tasks.
 Error (500): Returns an error message indicating "Internal server error" if there's an issue during deletion.
 ## Testing
--You can manually test the API using Postman and check the changes in MongoDB or using URL http//localhost:3000 see your changes on the site .
+-You can manually test the API using Postman and check the changes in MongoDB or using URL http://localhost:3000 see your changes on the site .
